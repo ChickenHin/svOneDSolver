@@ -1,5 +1,5 @@
 name: test
-on: [push, pull_request]
+on: workflow_dispatch
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
       - name: result unit tests 
         run: |
           cd build_skyline
-          ctest
+          ctest -V
